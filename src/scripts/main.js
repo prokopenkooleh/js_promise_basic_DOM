@@ -5,7 +5,7 @@ const errorDiv = document.createElement('div');
 const logo = document.querySelector('.logo');
 
 successDiv.classList.add('message');
-errorDiv.classList.add('error-message');
+errorDiv.classList.add('message', 'error-message');
 
 successDiv.textContent = 'Promise was resolved!';
 errorDiv.textContent = 'Promise was rejected!';
@@ -41,7 +41,7 @@ async function successData() {
 
     document.body.append(info);
   } catch (error) {
-    alert(error.message);
+    document.body.append(errorDiv);
   }
 }
 successData();
